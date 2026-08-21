@@ -1,16 +1,11 @@
+import os
 from fastapi import FastAPI
 from routes.student2_GetEndpoints import router as student2_get_router
 from routes.student2_PostEndpoints import router as student2_post_router
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
-origins = [
-    "http://localhost",
-    "https://localhost",
-    "http://127.0.0.1:8080",
-    "https://127.0.0.1:8080",
-    "https://mysite.netlify.app"
-]
+origins = os.getenv("ALLOWED_ORIGINS", "").split(",")
 
 app.add_middleware(
     CORSMiddleware,

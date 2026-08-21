@@ -13,9 +13,7 @@ router = APIRouter(
 
 @router.post("/")
 def add_character(character_data: CharacterCreate):
-    """
-    Create a new character and its stats.
-    """
+
     connection = get_db_connection()
 
     if connection is None:

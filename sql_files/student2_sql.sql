@@ -61,7 +61,7 @@ VALUES ('Braum Freljordson'
 INSERT INTO character_sheet(name, race, class, level, alignment, equipment, backstory)
 VALUES ('Liron Modnar'
         ,'Drow'
-        ,'rogue'
+        ,'Rogue'
         ,4
         ,'Neutral evil'
         ,'Rapier, shortbow, dagger, burglars pack, thieves tool, 2x health potions'
@@ -82,4 +82,55 @@ VALUES ('Liron Modnar'
         ,16
         ,15
         ,31
+);
+
+INSERT INTO character_sheet(name, race, class, level, alignment, equipment, backstory)
+VALUES ('Arannis Moonshadow'
+        ,'High Elf'
+        ,'Wizard'
+        ,4
+        ,'Neutral good'
+        ,'Spellbook, quarterstaff, component pouch, explorers pack'
+        ,'Arannis Moonshadow grew up in an ancient elven city devoted
+to knowledge and arcane study. From a young age he showed a strong talent for magic and spent most of his life studying
+forgotten spells and magical artifacts. Now he travels the world in search of lost knowledge, ancient ruins, and powerful magic that could change the
+fate of entire kingdoms.'
+);
+
+INSERT INTO stats(name, strength, dexterity, constitution, intelligence, wisdom, charisma, perception, armor_class, hit_points)
+VALUES ('Arannis Moonshadow'
+        ,10
+        ,14
+        ,12
+        ,18
+        ,13
+        ,11
+        ,14
+        ,13
+        ,42
+);
+
+INSERT INTO character_sheet(name, race, class, level, alignment, equipment, backstory)
+VALUES ('Lyra Stormwind'
+        ,'Human'
+        ,'Ranger'
+        ,4
+        ,'Chaotic good'
+        ,'Longbow, shortsword, explorers pack, leather armor'
+        ,'Lyra grew up travelling between small villages and forests.
+She learned to survive in the wilderness and became an experienced tracker.
+She now travels with adventurers while searching for a mysterious creature that has been appearing near her homeland.'
+);
+
+INSERT INTO stats(name, strength, dexterity, constitution, intelligence, wisdom, charisma, perception, armor_class, hit_points)
+VALUES ('Lyra Stormwind'
+        ,13
+        ,17
+        ,14
+        ,10
+        ,15
+        ,16
+        ,16
+        ,14
+        ,37
 );

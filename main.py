@@ -1,11 +1,20 @@
 import os
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 from routes.student2_GetEndpoints import router as student2_get_router
 from routes.student2_PostEndpoints import router as student2_post_router
-from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
 
-origins = os.getenv("ALLOWED_ORIGINS", "").split(",")
+origins = [
+    "https://splendid-toffee-b8c470.netlify.app",
+    "http://localhost:63343",
+    "http://localhost",
+    "https://localhost",
+    "http://127.0.0.1:8080",
+    "https://127.0.0.1:8080",
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,12 +24,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 def main():
     return {"message": "Hello, World!"}
 
 
-
-# Both routers can use the same prefix to keep your section organized
 app.include_router(student2_get_router)
 app.include_router(student2_post_router)
